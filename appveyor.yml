@@ -2,7 +2,7 @@ image: Visual Studio 2015
 
 init:
 - appveyor version
-- ping api.nuget.org
+#- ping api.nuget.org
 
 #shallow_clone: true
 platform: Any CPU
