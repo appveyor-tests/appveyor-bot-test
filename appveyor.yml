@@ -3,7 +3,7 @@ image: Visual Studio 2015
 init:
 - appveyor version
 - ps: '[System.IO.File]::WriteAllLines("C:\Windows\System32\drivers\etc\hosts", (Get-Content C:\Windows\System32\drivers\etc\hosts).Replace("93.184.221.200", "72.21.81.200"))'
-- ping api.nuget.org
+#- ping api.nuget.org
 
 #shallow_clone: true
 platform: Any CPU
