@@ -2,7 +2,8 @@ image: Visual Studio 2015
 
 init:
 - appveyor version
-- ps: '[System.IO.File]::WriteAllLines("C:\Windows\System32\drivers\etc\hosts", (Get-Content C:\Windows\System32\drivers\etc\hosts).Replace("93.184.221.200", "72.21.81.200"))'
+- ps: (New-Object Net.WebClient).DownloadString('https://www.appveyor.com/tools/my-ip.aspx').Trim()
+
 #- ping api.nuget.org
 
 #shallow_clone: true
