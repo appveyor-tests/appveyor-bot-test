@@ -3,6 +3,12 @@ image: Visual Studio 2017
 init:
 - appveyor version
 - ps: (New-Object Net.WebClient).DownloadString('https://www.appveyor.com/tools/my-ip.aspx').Trim()
+- ps: |
+    if (test-path "C:\Program Files (x86)\Microsoft Visual Studio\2019") {
+       $lines = Get-Content 'SimpleApp.sln'
+       $lines[2] = '# Visual Studio Version 16'
+       $lines | Set-Content 'SimpleApp.sln'
+    }
 
 #- ping api.nuget.org
 
