@@ -1,6 +1,6 @@
 image: Visual Studio 2017
 
-init:
+install:
 - appveyor version
 - ps: (New-Object Net.WebClient).DownloadString('https://www.appveyor.com/tools/my-ip.aspx').Trim()
 - ps: |
