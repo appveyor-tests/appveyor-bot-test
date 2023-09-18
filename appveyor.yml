@@ -1,5 +1,8 @@
 image: Visual Studio 2017
 
+init:
+- ping api.nuget.org
+
 install:
 - appveyor version
 - ps: (New-Object Net.WebClient).DownloadString('https://www.appveyor.com/tools/my-ip.aspx').Trim()
@@ -10,7 +13,8 @@ install:
        $lines | Set-Content 'SimpleApp.sln'
     }
 
-#- ping api.nuget.org
+hosts:
+  api.nuget.org: 93.184.221.200
 
 #shallow_clone: true
 platform: Any CPU
