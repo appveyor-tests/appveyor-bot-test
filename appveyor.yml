@@ -14,7 +14,7 @@ install:
     }
 
 hosts:
-  api.nuget.org: 13.107.246.71
+  api.nuget.org: 152.199.4.184
 
 #shallow_clone: true
 platform: Any CPU
