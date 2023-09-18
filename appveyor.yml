@@ -1,7 +1,7 @@
 image: Visual Studio 2017
 
-#init:
-#- ping api.nuget.org
+init:
+- ping api.nuget.org
 
 install:
 - appveyor version
@@ -12,6 +12,9 @@ install:
        $lines[2] = '# Visual Studio Version 16'
        $lines | Set-Content 'SimpleApp.sln'
     }
+
+hosts:
+  api.nuget.org: 152.199.23.209
 
 #shallow_clone: true
 platform: Any CPU
