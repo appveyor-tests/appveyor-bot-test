@@ -7,7 +7,7 @@ install:
 - appveyor version
 - ps: (New-Object Net.WebClient).DownloadString('https://www.appveyor.com/tools/my-ip.aspx').Trim()
 - ps: |
-    if ((test-path "C:\Program Files (x86)\Microsoft Visual Studio\2019") -or (test-path "C:\Program Files\Microsoft Visual Studio\2022") -or (test-path "C:\Program Files\Microsoft Visual Studio\18) {
+    if ((test-path "C:\Program Files (x86)\Microsoft Visual Studio\2019") -or (test-path "C:\Program Files\Microsoft Visual Studio\2022") -or (test-path "C:\Program Files\Microsoft Visual Studio\18") {
        $lines = Get-Content 'SimpleApp.sln'
        $lines[2] = '# Visual Studio Version 16'
        $lines | Set-Content 'SimpleApp.sln'
