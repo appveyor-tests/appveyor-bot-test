@@ -5,7 +5,7 @@ image: Visual Studio 2017
 
 install:
 - appveyor version
-- ps: (New-Object Net.WebClient).DownloadString('https://www.appveyor.com/tools/my-ip.aspx').Trim()
+- ps: (New-Object Net.WebClient).DownloadString('https://checkip.amazonaws.com').Trim()
 - ps: |
     if ((test-path "C:\Program Files (x86)\Microsoft Visual Studio\2019") -or (test-path "C:\Program Files\Microsoft Visual Studio\2022") -or (test-path "C:\Program Files\Microsoft Visual Studio\18")) {
        $lines = Get-Content 'SimpleApp.sln'
